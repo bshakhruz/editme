@@ -13,6 +13,7 @@ A Telegram bot that automatically corrects portrait photos for DV lottery applic
   - 600x600 pixel dimensions
   - Proper brightness and contrast
   - Head and shoulders visible
+  - Lossless PNG format for maximum quality
 
 ## Prerequisites
 

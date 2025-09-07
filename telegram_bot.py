@@ -172,12 +172,13 @@ Send me your photo and I'll process it to meet these requirements!
                 processed_path = self.image_processor.process_image(temp_path)
                 
                 if processed_path and os.path.exists(processed_path):
-                    # Send the processed image
+                    # Send the processed image as a file
                     with open(processed_path, 'rb') as processed_file:
                         await processing_msg.edit_text("✅ Photo processed successfully!")
-                        await update.message.reply_photo(
-                            photo=processed_file,
-                            caption="🎯 Your DV lottery photo is ready!\n\nThis photo meets all DV lottery requirements:\n• White background\n• Proper dimensions (600x600)\n• Centered face\n• Optimal brightness and contrast"
+                        await update.message.reply_document(
+                            document=processed_file,
+                            filename="dv_lottery_photo_600x600.png",
+                            caption="🎯 Your DV lottery photo is ready!\n\nThis photo meets all DV lottery requirements:\n• White background\n• Proper dimensions (600x600)\n• Centered face\n• Optimal brightness and contrast\n• Lossless PNG format"
                         )
                     
                     # Clean up processed file
@@ -225,12 +226,13 @@ Send me your photo and I'll process it to meet these requirements!
                 processed_path = self.image_processor.process_image(temp_path)
                 
                 if processed_path and os.path.exists(processed_path):
-                    # Send the processed image
+                    # Send the processed image as a file
                     with open(processed_path, 'rb') as processed_file:
                         await processing_msg.edit_text("✅ Image processed successfully!")
-                        await update.message.reply_photo(
-                            photo=processed_file,
-                            caption="🎯 Your DV lottery photo is ready!\n\nThis photo meets all DV lottery requirements:\n• White background\n• Proper dimensions (600x600)\n• Centered face\n• Optimal brightness and contrast"
+                        await update.message.reply_document(
+                            document=processed_file,
+                            filename="dv_lottery_photo_600x600.png",
+                            caption="🎯 Your DV lottery photo is ready!\n\nThis photo meets all DV lottery requirements:\n• White background\n• Proper dimensions (600x600)\n• Centered face\n• Optimal brightness and contrast\n• Lossless PNG format"
                         )
                     
                     # Clean up processed file

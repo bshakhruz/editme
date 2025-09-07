@@ -61,7 +61,7 @@ class ImageProcessor:
             Face centered and scaled to fit the frame.
             Image size: 600x600 pixels.
             Proper brightness and contrast so the face is clearly visible.
-            Crop extra background while keeping the head and shoulders visible.
+            Crop extra background while keeping the head and shoulders visible to the point as shown in the reference image no more.
             Ensure the output is a sharp, high-quality image in JPEG or PNG format.
 
             Use the first image as a reference sample and correct the second image accordingly.
@@ -161,10 +161,10 @@ class ImageProcessor:
                 
                 # Create new filename with _600x600 suffix
                 base_name, ext = os.path.splitext(image_path)
-                resized_path = f"{base_name}_600x600.jpg"
+                resized_path = f"{base_name}_600x600.png"
                 
-                # Save as JPEG with high quality
-                resized_img.save(resized_path, 'JPEG', quality=95)
+                # Save as PNG (lossless)
+                resized_img.save(resized_path, 'PNG')
                 
                 print(f"Image resized to 600x600: {resized_path}")
                 return resized_path
