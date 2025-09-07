@@ -68,7 +68,7 @@ pip install -r requirements.txt
 
 ### Step 5: Prepare Sample Image
 
-1. Place your reference image as `image.png` in the project root directory
+1. Place your reference image as `image.png` in the `sample/` directory
 2. This image will be used as a sample for the AI to understand the desired output format
 
 ## Usage
@@ -107,7 +107,8 @@ dv-lottery-bot/
 ├── requirements.txt          # Python dependencies
 ├── config.env.example       # Environment variables template
 ├── config.env               # Your actual environment variables (not in git)
-├── image.png                # Sample reference image
+├── sample/                  # Sample images directory
+│   └── image.png            # Reference image for AI processing
 ├── .gitignore              # Git ignore rules
 └── README.md                # This file
 ```

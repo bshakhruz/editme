@@ -28,7 +28,7 @@ class ImageProcessor:
             f.write(data)
         print(f"File saved to: {file_name}")
     
-    def process_image(self, user_image_path, sample_image_path="./image.png"):
+    def process_image(self, user_image_path, sample_image_path="./sample/image.png"):
         """
         Process user image using Gemini API with sample image as reference
         
