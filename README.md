@@ -28,8 +28,8 @@ A Telegram bot that automatically corrects portrait photos for DV lottery applic
 
 ```bash
 # If using git
-git clone <your-repo-url>
-cd dv-lottery-bot
+git clone https://github.com/bshakhruz/editme.git
+cd editme
 
 # Or simply download the files to a folder
 ```
@@ -44,10 +44,10 @@ pip install -r requirements.txt
 
 1. Copy the example configuration file:
    ```bash
-   copy config.env.example config.env
+   copy .env.example .env
    ```
 
-2. Edit `config.env` file with your API keys:
+2. Edit `.env` file with your API keys:
    ```
    TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
    GEMINI_API_KEY=your_gemini_api_key_here
